@@ -394,7 +394,42 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-}  </style>
+/* ====================== HERO AVEC PHOTO ====================== */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    min-height: 620px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-xl);
+    border: 8px solid var(--white);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    .hero-image {
+        display: flex;
+        justify-content: center;
+    }
+    .hero-image img {
+        max-width: 280px;
+    }
+} </style>
 </head>
 <body>
     <header id="hdr">
@@ -438,97 +473,48 @@
     </nav>
     
     <main>
-        <section class="hero">
-            <div class="hero-bg"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <div class="eyebrow reveal">
-                        <span class="eyebrow-dot"></span>
-                        Nouveau freelance · 15 ans d’expérience ops · 18€/h
-                    </div>
-                    <h1 class="reveal d1">
-                        <span class="accent">M Digit</span>
-                        <span class="h1-line2">De la banque à la logistique, j’opère votre back-office</span>
-                    </h1>
-                    <p class="lead reveal d2">
-                        <strong>Ex-banquier 6 ans, responsable microfinance 3 ans, ops terrain 6 ans.</strong> 
-                        Aujourd’hui je deviens le bras droit des PME : admin, CRM, logistique, community management. 
-                        Je connais la pression du cash-flow ET celle du dernier colis à 18h.
-                    </p>
-                    <div class="hero-actions reveal d3">
-                        <a href="https://calendly.com/d/cvyb-68g-hjn" target="_blank" rel="noopener" class="btn-primary">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M8 2v4M16 2v4M3 10h18"/>
-                                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                            </svg>
-                            Réserver un appel découverte
-                        </a>
-                        <a href="#tarifs" class="btn-secondary">
-                            Voir mes tarifs dès 18€/h
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="hero-note reveal d4">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                        Appel gratuit · Réponse sous 24h · Sans engagement
-                    </div>
+       <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-grid">
+            
+            <!-- Colonne de gauche : Texte -->
+            <div class="hero-content">
+                <div class="eyebrow reveal">
+                    <span class="eyebrow-dot"></span>
+                    Assistant Virtuel Freelance · 15 ans d’expérience
+                </div>
+                <h1 class="reveal d1">
+                    Je suis <span class="accent">M Digit</span><br>
+                    <span class="h1-line2">Votre bras droit en back-office</span>
+                </h1>
+                <p class="lead reveal d2">
+                    Ex-banquier et responsable logistique. Aujourd’hui je gère l’administratif, le graphisme, la création de contenu et les automatisations pour les PME.
+                </p>
+                <div class="hero-actions reveal d3">
+                    <a href="https://calendly.com/d/cvyb-68g-hjn" target="_blank" rel="noopener" class="btn-primary">
+                        Réserver un appel découverte
+                    </a>
+                    <a href="#realisations" class="btn-secondary">
+                        Voir mes réalisations
+                    </a>
+                </div>
+                <div class="hero-note reveal d4">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    Appel gratuit · Réponse sous 24h
                 </div>
             </div>
-        </section>
-        
-        <div class="strip">
-            <div class="container">
-                <div class="strip-inner">
-                    <span class="strip-label">Disponible sur</span>
-                    <a href="https://comeup.com/fr/@assistant-miary" target="_blank" rel="noopener" class="strip-badge"><span class="on"></span>Comeup</a>
-                    <a href="https://www.linkedin.com/in/miary-tahiry-andriamamonjy" target="_blank" rel="noopener" class="strip-badge"><span class="on"></span>LinkedIn</a>
-                    <span class="strip-badge">🌍 Remote Europe/Afrique</span>
-                    <span class="strip-badge">🇫🇷 Cergy, Île-de-France</span>
-                    <span class="strip-badge">💶 Dès 18€/h</span>
-                </div>
-            </div>
-        </div>
 
-        <section class="section" id="services">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Services</span>
-                    <h2 class="section-title">Je gère ce qui vous fait perdre du temps</h2>
-                    <p class="section-desc">De l'admin au SAV en passant par la logistique. Vous gardez le pilotage, je m'occupe de l'exécution.</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card featured">
-                        <div class="service-icon">📦</div>
-                        <h3>Logistique & Expéditions</h3>
-                        <p>Suivi commandes, préparation bons de livraison, coordination transporteurs, gestion des retours. 6 ans de terrain : je sais ce qu'est un quai à 17h30.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">💼</div>
-                        <h3>Gestion Admin & Facturation</h3>
-                        <p>Devis, factures, relances clients, rapprochement bancaire. Ex-banquier : je comprends la trésorerie et l'urgence des encaissements.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📊</div>
-                        <h3>CRM & Base de Données</h3>
-                        <p>Mise à jour CRM, qualification leads, reporting hebdo, nettoyage BDD. Fini les fichiers Excel qui traînent.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">💬</div>
-                        <h3>Community Management</h3>
-                        <p>Réponses DM/commentaires, modération, planning de posts, SAV social. Je protège votre réputation pendant que vous produisez.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📞</div>
-                        <h3>Support Client</h3>
-                        <p>Gestion emails, chat, téléphone. Réponses sous 24h. Je filtre l'urgent de l'important pour vous.</p>
-                    </div>
-                </div>
+            <!-- Colonne de droite : Photo -->
+            <div class="hero-image reveal">
+                <img src="images/photo-profil.webp" alt="Miary Andriamamonjy - M Digit Assistant Virtuel">
             </div>
-        </section>
+
+        </div>
+    </div>
+</section>
  <section class="section" id="realisations">
     <div class="container">
         <div class="section-header">
