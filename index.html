@@ -176,7 +176,7 @@
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
-   /* ====================== REALISATIONS ====================== */
+  /* ====================== REALISATIONS ====================== */
 .realisations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -194,6 +194,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .realisations-card:hover {
@@ -203,14 +204,20 @@
 }
 
 .realisations-image {
-    height: 190px;
+    height: 210px;
     background: linear-gradient(135deg, #FFF7ED, #FEF3C7);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 62px;
     border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.realisations-image svg {
+    width: 92px;
+    height: 92px;
+    color: #D97706;
 }
 
 .category-tag {
@@ -265,10 +272,24 @@
 .realisations-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 13.5px;
     color: var(--text-light);
     padding-top: 16px;
     border-top: 1px solid var(--bg-soft);
+}
+
+.view-project {
+    color: var(--brand);
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.view-project:hover {
+    text-decoration: underline;
 }
 
 .realisations-cta {
@@ -277,7 +298,7 @@
     background: var(--brand-ultra);
     border-radius: var(--radius-lg);
     border: 1px solid var(--brand-light);
-} </style>
+}  </style>
 </head>
 <body>
     <header id="hdr">
@@ -412,24 +433,26 @@
                 </div>
             </div>
         </section>
- <section class="section" id="realisations">
+  <section class="section" id="realisations">
     <div class="container">
         <div class="section-header">
             <span class="section-label">Réalisations</span>
             <h2 class="section-title">Missions réalisées avec succès</h2>
             <p class="section-desc">
-                Exemples concrets de missions que j’ai menées pour des entrepreneurs et PME. 
-                <strong>Prêt à faire la même chose pour vous ?</strong>
+                Cliquez sur chaque carte pour voir le projet en détail sur Canva.
             </p>
         </div>
 
         <div class="realisations-grid">
             
             <!-- 1 -->
-            <div class="realisation-card">
+            <a href="https://www.canva.com/d/fUBqAQWo8sVmtAz" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Graphisme</span>
-                    <div class="image-placeholder">🎨</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 21v-8a2 2 0 00-2-2h-2a2 2 0 00-2 2v8" />
+                    </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Refonte visuelle complète pour un coach</h3>
@@ -444,22 +467,24 @@
                     </div>
                     <div class="realisation-footer">
                         <span class="date">Mai 2025</span>
-                        <span class="client-type">Coach indépendant</span>
+                        <span class="view-project">Voir le projet →</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <!-- 2 -->
-            <div class="realisation-card">
+            <a href="https://www.canva.com/d/0N7cMoHXgY0QJ8g" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Automatisation</span>
-                    <div class="image-placeholder">⚡</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 002.573-1.066c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 00.817 1.194 1.724 1.724 0 01.817 1.194c-.94 1.543.827 3.31 2.37 2.37 1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 01-2.573 1.066 1.724 1.724 0 01-.817 1.194 1.724 1.724 0 01-.817 1.194c.94 1.543-.827 3.31-2.37 2.37-1.756.426-1.756 2.924 0 3.35a1.724 1.724 0 01-2.573 1.066 1.724 1.724 0 01-.817 1.194" />
+                    </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Automatisation administrative & reporting</h3>
                     <p class="realisation-desc">
-                        Mise en place de tableaux de bord Google Sheets + automatisation des relances clients et suivi des paiements.
-                        <strong>Résultat :</strong> Gain de 18 heures par mois pour le client.
+                        Mise en place de tableaux de bord + automatisation des relances et suivi paiements.
+                        <strong>Résultat :</strong> Gain de 18 heures par mois.
                     </p>
                     <div class="tags">
                         <span>Google Sheets</span>
@@ -468,22 +493,24 @@
                     </div>
                     <div class="realisation-footer">
                         <span class="date">Avril 2025</span>
-                        <span class="client-type">E-commerce</span>
+                        <span class="view-project">Voir le projet →</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <!-- 3 -->
-            <div class="realisation-card">
+            <a href="https://www.canva.com/d/zEBtaoqdsCDBstY" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Admin + CRM</span>
-                    <div class="image-placeholder">📋</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1v-5m10-10l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v5" />
+                    </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Gestion administrative & CRM complète</h3>
                     <p class="realisation-desc">
-                        Gestion des factures, relances, qualification de leads et mise à jour du CRM pour une entreprise de services.
-                        <strong>Résultat :</strong> -41% de factures impayées en 6 semaines.
+                        Gestion factures, relances, leads et CRM.
+                        <strong>Résultat :</strong> -41% de factures impayées.
                     </p>
                     <div class="tags">
                         <span>HubSpot</span>
@@ -492,22 +519,24 @@
                     </div>
                     <div class="realisation-footer">
                         <span class="date">Mars 2025</span>
-                        <span class="client-type">Entreprise de services</span>
+                        <span class="view-project">Voir le projet →</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <!-- 4 -->
-            <div class="realisation-card">
+            <a href="https://www.canva.com/d/SeIH_ta8gTtiivq" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Contenu</span>
-                    <div class="image-placeholder">✍️</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2v-5m10-10l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v5" />
+                    </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Création de contenu & Community Management</h3>
                     <p class="realisation-desc">
-                        Rédaction de posts LinkedIn + réponses DM et stratégie de contenu pour un consultant B2B.
-                        <strong>Résultat :</strong> +280 abonnés qualifiés en 2 mois.
+                        Rédaction posts LinkedIn + stratégie de contenu.
+                        <strong>Résultat :</strong> +280 abonnés qualifiés.
                     </p>
                     <div class="tags">
                         <span>LinkedIn</span>
@@ -516,14 +545,14 @@
                     </div>
                     <div class="realisation-footer">
                         <span class="date">Février 2025</span>
-                        <span class="client-type">Consultant B2B</span>
+                        <span class="view-project">Voir le projet →</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
         </div>
 
-        <!-- Call to Action -->
+        <!-- CTA final -->
         <div class="realisations-cta">
             <p style="font-size: 18px; color: var(--text); margin-bottom: 20px;">
                 Vous avez un projet similaire ou besoin d’un bras droit fiable ?
