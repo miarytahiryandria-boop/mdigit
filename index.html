@@ -429,6 +429,75 @@
     .hero-image img {
         max-width: 280px;
     }
+/* ====================== SECTION À PROPOS ====================== */
+.about-content-new {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-photo {
+    position: relative;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+    border: 8px solid white;
+}
+
+.about-text-new {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-muted);
+}
+
+.about-text-new p {
+    margin-bottom: 22px;
+}
+
+.about-text-new strong {
+    color: var(--text);
+}
+
+.about-stats-new {
+    display: flex;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--brand);
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-light);
+    display: block;
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .about-content-new {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-photo {
+        order: -1;
+    }
 } </style>
 </head>
 <body>
@@ -676,37 +745,52 @@
                 </div>
             </div>
         </section>
+<section class="section" id="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Parcours</span>
+            <h2 class="section-title">15 ans entre finance et terrain</h2>
+        </div>
 
-        <section class="section" id="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <span class="section-label">Parcours</span>
-                        <h2 class="section-title">15 ans entre finance et terrain</h2>
-                        <p><strong>6 ans banquier</strong> puis <strong>3 ans responsable microfinance</strong> : j'ai analysé des centaines de dossiers, géré des portefeuilles, compris la pression du cash-flow. Je sais ce qu'est un découvert qui stresse.</p>
-                        <p><strong>6 ans en logistique opérationnelle</strong> : quais, tournées, SAV, litiges transporteurs. J'ai vu des palettes bloquées un vendredi 17h. Je connais l'urgence du dernier colis.</p>
-                        <p>Aujourd'hui avec <strong>M Digit</strong>, je combine les deux : rigueur financière + pragmatisme terrain. Je ne fais pas de slides, je fais le taf.</p>
+        <div class="about-content-new">
+            <!-- Photo -->
+            <div class="about-photo">
+                <img src="https://via.placeholder.com/600x700/FEF3C7/D97706?text=Miary+Andriamamonjy" 
+                     alt="Miary Andriamamonjy - Assistant Virtuel Freelance" 
+                     class="about-img">
+            </div>
+
+            <!-- Texte -->
+            <div class="about-text-new">
+                <p><strong>6 ans banquier</strong> puis <strong>3 ans responsable microfinance</strong> : j'ai analysé des centaines de dossiers, géré des portefeuilles et compris la pression du cash-flow.</p>
+                
+                <p><strong>6 ans en logistique opérationnelle</strong> : quais, tournées, SAV, litiges transporteurs. J'ai vu des palettes bloquées un vendredi 17h. Je connais l'urgence du terrain.</p>
+                
+                <p>Aujourd’hui avec <strong>M Digit</strong>, je combine rigueur financière et pragmatisme terrain. Je ne fais pas de slides, je fais le taf.</p>
+
+                <div class="about-stats-new">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Ans d’expérience</span>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <div class="stat-number">15</div>
-                            <div class="stat-label">Ans d'expérience</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">18€</div>
-                            <div class="stat-label">Tarif horaire</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">6</div>
-                            <div class="stat-label">Ans logistique</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">24h</div>
-                            <div class="stat-label">Délai réponse</div>
-                        </div>
+                    <div class="stat-item">
+                        <span class="stat-number">18€</span>
+                        <span class="stat-label">/heure</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Ans logistique</span>
                     </div>
                 </div>
+
+                <a href="https://calendly.com/d/cvyb-68g-hjn" target="_blank" class="btn-primary" style="margin-top: 30px; display: inline-flex;">
+                    Discuter de votre projet →
+                </a>
             </div>
+        </div>
+    </div>
+</section>
+        
         </section>
 
         <section class="section" id="contact">
