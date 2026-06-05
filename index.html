@@ -298,6 +298,102 @@
     background: var(--brand-ultra);
     border-radius: var(--radius-lg);
     border: 1px solid var(--brand-light);
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.realisations-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all .4s var(--ease);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.realisations-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--brand);
+}
+
+.realisations-image {
+    height: 220px;
+    background: linear-gradient(135deg, #FFF7ED, #FEF3C7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+}
+
+.realisations-image svg {
+    width: 88px;
+    height: 88px;
+    color: var(--brand);
+}
+
+.category-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--brand);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 9999px;
+}
+
+.realisations-content {
+    padding: 28px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.realisations-content h3 {
+    font-family: var(--font-display);
+    font-size: 21px;
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.realisations-desc {
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tags span {
+    font-size: 13px;
+    background: var(--bg-soft);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    color: var(--text-light);
+}
+
+.view-project {
+    color: var(--brand);
+    font-weight: 600;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }  </style>
 </head>
 <body>
@@ -433,133 +529,79 @@
                 </div>
             </div>
         </section>
-  <section class="section" id="realisations">
+ <section class="section" id="realisations">
     <div class="container">
         <div class="section-header">
             <span class="section-label">Réalisations</span>
-            <h2 class="section-title">Missions réalisées avec succès</h2>
+            <h2 class="section-title">Mes dernières missions</h2>
             <p class="section-desc">
-                Cliquez sur chaque carte pour voir le projet en détail sur Canva.
+                Voici quelques exemples concrets de missions réalisées pour mes clients. Cliquez sur les cartes pour voir les détails.
             </p>
         </div>
 
         <div class="realisations-grid">
             
-            <!-- 1 -->
             <a href="https://www.canva.com/d/fUBqAQWo8sVmtAz" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Graphisme</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 21v-8a2 2 0 00-2-2h-2a2 2 0 00-2 2v8" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2 2 2 0 01-2-2 2 2 0 012-2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M17 21v-8a2 2 0 00-2-2h-2a2 2 0 00-2 2v8" />
                     </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Refonte visuelle complète pour un coach</h3>
-                    <p class="realisation-desc">
-                        Création d’une identité visuelle + 30 templates Canva (posts, stories, ebooks, présentations). 
-                        <strong>Résultat :</strong> +62% d’engagement sur Instagram en 1 mois.
-                    </p>
-                    <div class="tags">
-                        <span>Canva</span>
-                        <span>Branding</span>
-                        <span>Contenu visuel</span>
-                    </div>
-                    <div class="realisation-footer">
-                        <span class="date">Mai 2025</span>
-                        <span class="view-project">Voir le projet →</span>
-                    </div>
+                    <p class="realisation-desc">Création identité visuelle + 30 templates Canva (posts, stories, ebooks...)</p>
+                    <div class="tags"><span>Canva</span><span>Branding</span></div>
+                    <span class="view-project">Voir le projet →</span>
                 </div>
             </a>
 
-            <!-- 2 -->
             <a href="https://www.canva.com/d/0N7cMoHXgY0QJ8g" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Automatisation</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 002.573-1.066c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 00.817 1.194 1.724 1.724 0 01.817 1.194c-.94 1.543.827 3.31 2.37 2.37 1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 01-2.573 1.066 1.724 1.724 0 01-.817 1.194 1.724 1.724 0 01-.817 1.194c.94 1.543-.827 3.31-2.37 2.37-1.756.426-1.756 2.924 0 3.35a1.724 1.724 0 01-2.573 1.066 1.724 1.724 0 01-.817 1.194" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 002.573-1.066c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 00.817 1.194 1.724 1.724 0 01.817 1.194c-.94 1.543.827 3.31 2.37 2.37 1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 01-2.573 1.066 1.724 1.724 0 01-.817 1.194 1.724 1.724 0 01-.817 1.194c.94 1.543-.827 3.31-2.37 2.37-1.756.426-1.756 2.924 0 3.35a1.724 1.724 0 01-2.573 1.066 1.724 1.724 0 01-.817 1.194" />
                     </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Automatisation administrative & reporting</h3>
-                    <p class="realisation-desc">
-                        Mise en place de tableaux de bord + automatisation des relances et suivi paiements.
-                        <strong>Résultat :</strong> Gain de 18 heures par mois.
-                    </p>
-                    <div class="tags">
-                        <span>Google Sheets</span>
-                        <span>Automatisation</span>
-                        <span>Reporting</span>
-                    </div>
-                    <div class="realisation-footer">
-                        <span class="date">Avril 2025</span>
-                        <span class="view-project">Voir le projet →</span>
-                    </div>
+                    <p class="realisation-desc">Tableaux de bord + automatisation relances et suivi paiements</p>
+                    <div class="tags"><span>Google Sheets</span><span>Automatisation</span></div>
+                    <span class="view-project">Voir le projet →</span>
                 </div>
             </a>
 
-            <!-- 3 -->
             <a href="https://www.canva.com/d/zEBtaoqdsCDBstY" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Admin + CRM</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1v-5m10-10l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1v-5m10-10l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v5" />
                     </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Gestion administrative & CRM complète</h3>
-                    <p class="realisation-desc">
-                        Gestion factures, relances, leads et CRM.
-                        <strong>Résultat :</strong> -41% de factures impayées.
-                    </p>
-                    <div class="tags">
-                        <span>HubSpot</span>
-                        <span>Facturation</span>
-                        <span>CRM</span>
-                    </div>
-                    <div class="realisation-footer">
-                        <span class="date">Mars 2025</span>
-                        <span class="view-project">Voir le projet →</span>
-                    </div>
+                    <p class="realisation-desc">Facturation, relances, leads et suivi CRM</p>
+                    <div class="tags"><span>HubSpot</span><span>Facturation</span></div>
+                    <span class="view-project">Voir le projet →</span>
                 </div>
             </a>
 
-            <!-- 4 -->
             <a href="https://www.canva.com/d/SeIH_ta8gTtiivq" target="_blank" class="realisation-card">
                 <div class="realisation-image">
                     <span class="category-tag">Contenu</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2v-5m10-10l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2v-5m10-10l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v5" />
                     </svg>
                 </div>
                 <div class="realisation-content">
                     <h3>Création de contenu & Community Management</h3>
-                    <p class="realisation-desc">
-                        Rédaction posts LinkedIn + stratégie de contenu.
-                        <strong>Résultat :</strong> +280 abonnés qualifiés.
-                    </p>
-                    <div class="tags">
-                        <span>LinkedIn</span>
-                        <span>Rédaction</span>
-                        <span>Community</span>
-                    </div>
-                    <div class="realisation-footer">
-                        <span class="date">Février 2025</span>
-                        <span class="view-project">Voir le projet →</span>
-                    </div>
+                    <p class="realisation-desc">Posts LinkedIn, réponses DM et stratégie de contenu</p>
+                    <div class="tags"><span>LinkedIn</span><span>Rédaction</span></div>
+                    <span class="view-project">Voir le projet →</span>
                 </div>
             </a>
 
-        </div>
-
-        <!-- CTA final -->
-        <div class="realisations-cta">
-            <p style="font-size: 18px; color: var(--text); margin-bottom: 20px;">
-                Vous avez un projet similaire ou besoin d’un bras droit fiable ?
-            </p>
-            <a href="https://calendly.com/d/cvyb-68g-hjn" target="_blank" rel="noopener" class="btn-primary" style="font-size: 17px; padding: 16px 32px;">
-                Réserver un appel découverte gratuit →
-            </a>
         </div>
     </div>
 </section>
