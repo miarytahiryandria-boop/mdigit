@@ -176,7 +176,108 @@
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
-    </style>
+   /* ====================== REALISATIONS ====================== */
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.realisations-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all .4s var(--ease);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.realisations-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--brand);
+}
+
+.realisations-image {
+    height: 190px;
+    background: linear-gradient(135deg, #FFF7ED, #FEF3C7);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 62px;
+    border-bottom: 1px solid var(--border);
+}
+
+.category-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--brand);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 9999px;
+}
+
+.realisations-content {
+    padding: 26px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.realisations-content h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.realisations-desc {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    font-size: 13px;
+    background: var(--bg-soft);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    color: var(--text-light);
+}
+
+.realisations-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    color: var(--text-light);
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-soft);
+}
+
+.realisations-cta {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--brand-ultra);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--brand-light);
+} </style>
 </head>
 <body>
     <header id="hdr">
@@ -311,36 +412,128 @@
                 </div>
             </div>
         </section>
-<section class="section" id="realisations">
+ <section class="section" id="realisations">
     <div class="container">
         <div class="section-header">
             <span class="section-label">Réalisations</span>
-            <h2 class="section-title">Exemples de missions réalisées</h2>
+            <h2 class="section-title">Missions réalisées avec succès</h2>
             <p class="section-desc">
-                Voici quelques exemples de tâches que je peux prendre en charge pour mes clients.
+                Exemples concrets de missions que j’ai menées pour des entrepreneurs et PME. 
+                <strong>Prêt à faire la même chose pour vous ?</strong>
             </p>
         </div>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🎨</div>
-                <h3>Création de visuels Canva</h3>
-                <p>Création de publications Facebook, Instagram, flyers et supports professionnels.</p>
+        <div class="realisations-grid">
+            
+            <!-- 1 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <span class="category-tag">Graphisme</span>
+                    <div class="image-placeholder">🎨</div>
+                </div>
+                <div class="realisation-content">
+                    <h3>Refonte visuelle complète pour un coach</h3>
+                    <p class="realisation-desc">
+                        Création d’une identité visuelle + 30 templates Canva (posts, stories, ebooks, présentations). 
+                        <strong>Résultat :</strong> +62% d’engagement sur Instagram en 1 mois.
+                    </p>
+                    <div class="tags">
+                        <span>Canva</span>
+                        <span>Branding</span>
+                        <span>Contenu visuel</span>
+                    </div>
+                    <div class="realisation-footer">
+                        <span class="date">Mai 2025</span>
+                        <span class="client-type">Coach indépendant</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon">⚙️</div>
-                <h3>Automatisation administrative</h3>
-                <p>Mise en place de tableaux de suivi Google Sheets et automatisation des tâches répétitives.</p>
+            <!-- 2 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <span class="category-tag">Automatisation</span>
+                    <div class="image-placeholder">⚡</div>
+                </div>
+                <div class="realisation-content">
+                    <h3>Automatisation administrative & reporting</h3>
+                    <p class="realisation-desc">
+                        Mise en place de tableaux de bord Google Sheets + automatisation des relances clients et suivi des paiements.
+                        <strong>Résultat :</strong> Gain de 18 heures par mois pour le client.
+                    </p>
+                    <div class="tags">
+                        <span>Google Sheets</span>
+                        <span>Automatisation</span>
+                        <span>Reporting</span>
+                    </div>
+                    <div class="realisation-footer">
+                        <span class="date">Avril 2025</span>
+                        <span class="client-type">E-commerce</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon">📈</div>
-                <h3>Prospection commerciale</h3>
-                <p>Recherche de prospects, qualification de leads et suivi CRM.</p>
+            <!-- 3 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <span class="category-tag">Admin + CRM</span>
+                    <div class="image-placeholder">📋</div>
+                </div>
+                <div class="realisation-content">
+                    <h3>Gestion administrative & CRM complète</h3>
+                    <p class="realisation-desc">
+                        Gestion des factures, relances, qualification de leads et mise à jour du CRM pour une entreprise de services.
+                        <strong>Résultat :</strong> -41% de factures impayées en 6 semaines.
+                    </p>
+                    <div class="tags">
+                        <span>HubSpot</span>
+                        <span>Facturation</span>
+                        <span>CRM</span>
+                    </div>
+                    <div class="realisation-footer">
+                        <span class="date">Mars 2025</span>
+                        <span class="client-type">Entreprise de services</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- 4 -->
+            <div class="realisation-card">
+                <div class="realisation-image">
+                    <span class="category-tag">Contenu</span>
+                    <div class="image-placeholder">✍️</div>
+                </div>
+                <div class="realisation-content">
+                    <h3>Création de contenu & Community Management</h3>
+                    <p class="realisation-desc">
+                        Rédaction de posts LinkedIn + réponses DM et stratégie de contenu pour un consultant B2B.
+                        <strong>Résultat :</strong> +280 abonnés qualifiés en 2 mois.
+                    </p>
+                    <div class="tags">
+                        <span>LinkedIn</span>
+                        <span>Rédaction</span>
+                        <span>Community</span>
+                    </div>
+                    <div class="realisation-footer">
+                        <span class="date">Février 2025</span>
+                        <span class="client-type">Consultant B2B</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="realisations-cta">
+            <p style="font-size: 18px; color: var(--text); margin-bottom: 20px;">
+                Vous avez un projet similaire ou besoin d’un bras droit fiable ?
+            </p>
+            <a href="https://calendly.com/d/cvyb-68g-hjn" target="_blank" rel="noopener" class="btn-primary" style="font-size: 17px; padding: 16px 32px;">
+                Réserver un appel découverte gratuit →
+            </a>
         </div>
     </div>
+</section>
 </section>
         <section class="tools-section section" id="outils">
             <div class="container">
