@@ -236,12 +236,15 @@
             animation: fadeIn 0.6s ease-out;
         }
 
-        .photo-profil { width: 180px;
-  height: 180px;
+       .photo-profil {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 20px auto;
+  object-fit: contain;   /* au lieu de cover */
+  background-color: #f5f5f5; /* évite les bords vides */
+  padding: 5px;
+}
+
 }
 
         }
